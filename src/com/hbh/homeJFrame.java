@@ -149,11 +149,21 @@ public class homeJFrame extends javax.swing.JFrame {
 
         btnTroGiup.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnTroGiup.setText("TRỢ GIÚP");
+        btnTroGiup.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTroGiupMouseClicked(evt);
+            }
+        });
 
         btnTinNhan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnTinNhan.setText("TIN NHẮN");
+        btnTinNhan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTinNhanMouseClicked(evt);
+            }
+        });
 
-        pnQuanLy.setBackground(new java.awt.Color(0, 204, 0));
+        pnQuanLy.setBackground(new java.awt.Color(255, 255, 255));
         pnQuanLy.setForeground(new java.awt.Color(0, 204, 51));
 
         javax.swing.GroupLayout pnQuanLyLayout = new javax.swing.GroupLayout(pnQuanLy);
@@ -167,7 +177,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 10, Short.MAX_VALUE)
         );
 
-        pnBanHang.setBackground(new java.awt.Color(0, 204, 0));
+        pnBanHang.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnBanHangLayout = new javax.swing.GroupLayout(pnBanHang);
         pnBanHang.setLayout(pnBanHangLayout);
@@ -180,7 +190,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 11, Short.MAX_VALUE)
         );
 
-        pnNhapHang.setBackground(new java.awt.Color(0, 204, 0));
+        pnNhapHang.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnNhapHangLayout = new javax.swing.GroupLayout(pnNhapHang);
         pnNhapHang.setLayout(pnNhapHangLayout);
@@ -193,7 +203,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 11, Short.MAX_VALUE)
         );
 
-        pnBaoHanh.setBackground(new java.awt.Color(0, 204, 0));
+        pnBaoHanh.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnBaoHanhLayout = new javax.swing.GroupLayout(pnBaoHanh);
         pnBaoHanh.setLayout(pnBaoHanhLayout);
@@ -206,7 +216,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 11, Short.MAX_VALUE)
         );
 
-        pnBaoCaoThongKe.setBackground(new java.awt.Color(0, 204, 0));
+        pnBaoCaoThongKe.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnBaoCaoThongKeLayout = new javax.swing.GroupLayout(pnBaoCaoThongKe);
         pnBaoCaoThongKe.setLayout(pnBaoCaoThongKeLayout);
@@ -219,7 +229,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 11, Short.MAX_VALUE)
         );
 
-        pnTroGiup.setBackground(new java.awt.Color(0, 204, 0));
+        pnTroGiup.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnTroGiupLayout = new javax.swing.GroupLayout(pnTroGiup);
         pnTroGiup.setLayout(pnTroGiupLayout);
@@ -232,7 +242,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGap(0, 11, Short.MAX_VALUE)
         );
 
-        pnTinNhan.setBackground(new java.awt.Color(0, 204, 0));
+        pnTinNhan.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnTinNhanLayout = new javax.swing.GroupLayout(pnTinNhan);
         pnTinNhan.setLayout(pnTinNhanLayout);
@@ -287,36 +297,41 @@ public class homeJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnNhapHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(0, 0, 0)
-                        .addComponent(pnNhapHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnNhapHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnBanHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(16, 16, 16))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnBanHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(0, 0, 0)
-                        .addComponent(pnBanHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnQuanLy, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(pnNhapHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(pnBanHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(pnQuanLy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(2, 2, 2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnQuanLy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)
-                                .addComponent(pnQuanLy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnTinNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)
-                                .addComponent(pnTinNhan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnBaoHanh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)
-                                .addComponent(pnBaoHanh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnTinNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                                    .addComponent(btnTroGiup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(pnTroGiup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pnTinNhan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(btnBaoCaoThongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(pnBaoCaoThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnTroGiup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)
-                                .addComponent(pnTroGiup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnBaoHanh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pnBaoHanh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(2, 2, 2)))
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
 
@@ -347,7 +362,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGroup(QuanLyLayout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(381, Short.MAX_VALUE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
 
         main.add(QuanLy, "card2");
@@ -371,7 +386,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGroup(BanHangLayout.createSequentialGroup()
                 .addGap(229, 229, 229)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(352, Short.MAX_VALUE))
         );
 
         main.add(BanHang, "card2");
@@ -393,7 +408,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGroup(NhapHangLayout.createSequentialGroup()
                 .addGap(229, 229, 229)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(352, Short.MAX_VALUE))
         );
 
         main.add(NhapHang, "card2");
@@ -414,7 +429,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGroup(BaoHanhLayout.createSequentialGroup()
                 .addGap(267, 267, 267)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(352, Short.MAX_VALUE))
         );
 
         main.add(BaoHanh, "card2");
@@ -435,7 +450,7 @@ public class homeJFrame extends javax.swing.JFrame {
             .addGroup(BaoCaoThongKeLayout.createSequentialGroup()
                 .addGap(278, 278, 278)
                 .addComponent(jLabel17)
-                .addContainerGap(427, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
 
         main.add(BaoCaoThongKe, "card2");
@@ -448,7 +463,7 @@ public class homeJFrame extends javax.swing.JFrame {
         );
         TroGiupLayout.setVerticalGroup(
             TroGiupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 721, Short.MAX_VALUE)
+            .addGap(0, 704, Short.MAX_VALUE)
         );
 
         main.add(TroGiup, "card2");
@@ -461,7 +476,7 @@ public class homeJFrame extends javax.swing.JFrame {
         );
         TinNhanLayout.setVerticalGroup(
             TinNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 721, Short.MAX_VALUE)
+            .addGap(0, 704, Short.MAX_VALUE)
         );
 
         main.add(TinNhan, "card2");
@@ -561,7 +576,7 @@ public class homeJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(main, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(main, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -584,6 +599,13 @@ public class homeJFrame extends javax.swing.JFrame {
         main.add(QuanLy);
         main.repaint();
         main.revalidate();
+        pnQuanLy.setBackground(new java.awt.Color(0, 204, 0));
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(null);
     }//GEN-LAST:event_btnQuanLyMouseClicked
 
     private void btnBanHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBanHangMouseClicked
@@ -591,6 +613,13 @@ public class homeJFrame extends javax.swing.JFrame {
         main.add(BanHang);
         main.repaint();
         main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(new java.awt.Color(0, 204, 0));
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(null);
     }//GEN-LAST:event_btnBanHangMouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
@@ -602,6 +631,13 @@ public class homeJFrame extends javax.swing.JFrame {
         main.add(NhapHang);
         main.repaint();
         main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(new java.awt.Color(0, 204, 0));
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(null);
     }//GEN-LAST:event_btnNhapHangMouseClicked
 
     private void btnBaoHanhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBaoHanhMouseClicked
@@ -609,6 +645,13 @@ public class homeJFrame extends javax.swing.JFrame {
         main.add(BaoHanh);
         main.repaint();
         main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(new java.awt.Color(0, 204, 0));
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(null);
     }//GEN-LAST:event_btnBaoHanhMouseClicked
 
     private void btnBaoCaoThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBaoCaoThongKeMouseClicked
@@ -616,7 +659,42 @@ public class homeJFrame extends javax.swing.JFrame {
         main.add(BaoCaoThongKe);
         main.repaint();
         main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(new java.awt.Color(0, 204, 0));
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(null);
     }//GEN-LAST:event_btnBaoCaoThongKeMouseClicked
+
+    private void btnTroGiupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTroGiupMouseClicked
+        main.removeAll();
+        main.add(TroGiup);
+        main.repaint();
+        main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(new java.awt.Color(0, 204, 0));
+        pnTinNhan.setBackground(null);
+    }//GEN-LAST:event_btnTroGiupMouseClicked
+
+    private void btnTinNhanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTinNhanMouseClicked
+        main.removeAll();
+        main.add(TinNhan);
+        main.repaint();
+        main.revalidate();
+        pnQuanLy.setBackground(null);
+        pnNhapHang.setBackground(null);
+        pnBanHang.setBackground(null);
+        pnBaoHanh.setBackground(null);
+        pnBaoCaoThongKe.setBackground(null);
+        pnTroGiup.setBackground(null);
+        pnTinNhan.setBackground(new java.awt.Color(0, 204, 0));
+    }//GEN-LAST:event_btnTinNhanMouseClicked
 
     /**
      * @param args the command line arguments
